@@ -61,69 +61,145 @@
             }
             
             .filter {
-                border: 1px solid #cccccc !important;
+                border: 0.5px solid #cccccc !important;
                 background-color: #ebebeb;
+                width: 100%;
             }
             
             .filter>div {
                 position: relative;
                 margin: 20px auto 20px auto;
-                width: 63%;
+                width: 75%;
                 height: auto;
             }
             
             .btn-circle {
                 border-radius: 50%;
-                
-            }
-
-            .content{
-              width: 70%;
-              display: block;
-            }
-
-            .main{
-                display: flex;
-                width:100%;
             }
             
-            .tag{
+            .content {
+                width: 70%;
+                display: block;
+            }
+            
+            .main {
+                display: flex;
+                width: 100%;
+            }
+
+            body{
+                background-color: #f2f2f2;
+            }
+            
+            .tag {
                 background-color: transparent;
                 border: 1px solid #7828B4;
-                border-radius: 15px;
-                color:#7828B4;
-                height: 35px;     
-                padding: 7px;     
-                display: inline-block; 
+                border-radius: 10px;
+                color: #7828B4;
+                height: 35px;
+                padding: 5px 2px;
+                display: inline-block;
                 white-space: nowrap;
-                margin-left: 5px;
+                margin:0px 0px 0px 5px;
+                font-size: 16px;
             }
-
-            input+span{
+            
+            .tag:hover {
+                background-color: #7828B4;
+                border-color: #FFFFFF;
+                color: #FFFFFF
+            }
+            
+            input+span {
                 margin-left: 5px
             }
-
-            .tag-close{
-                /* border-radius: 50%; */
-                height: 16px;
-                width: 16px;
-                display: inline-block;
-                margin: auto;
-                font-size: 10px;
-                align-items: center
-            }
-
-            .taglist{
+            
+            .taglist {
                 display: flex
             }
+            
+            .filter-info {
+                margin-bottom: 10px;
+                background-color: transparent;
+            }
+            
+            .filter-info>p {
+                margin: 10px;
+                width: 100%;
+            }
+            
+            .event>img {
+                height: 200px;
+                width: 200px;
+                min-width: 200px;
+                min-height: 200px;
+            }
+            
+            .event-info {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .event-info-row {
+                display: inline-block;
+                white-space: nowrap;
+                margin-bottom: 5px;
+            }
 
+            .event-tag{
+                background-color: #d7d7d7;
+                height: 24px;
+                color:#FFFFFF;
+                border-radius: 10px;
+                padding: 0 10px;
+                margin-left: 5px;
+            }
+            
+            .title {
+                font-family: "Roboto Bold";
+                font-size: 24px;
+            }
+
+            .purple{
+                color: #9013FE
+            }
+            
+            .event {
+                display: flex;
+                height: 200px;
+                background-color: #FFFFFF;
+                width: 100%;
+                box-shadow: 2px 2px 3px #000000;
+                margin-bottom: 10px;
+            }
+
+            .event:hover{
+                box-shadow: 3px 3px 8px #000000;
+                transform: translate(-5px, -5px);
+            }
+            
+            .event-content {
+                padding: 5px;
+            }
+            
+            .event-content>p {
+                height: 50%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                padding: 1px;
+            }
+            
+            .paragraph {
+                font-family: "Roboto Bold 16px";
+                font-size: 16px;
+            }
         </style>
     </head>
 
     <body>
         <header class="header">
             <div>
-                <div class="logo">HaveFun</div>
+                <div class="logo" href="#">HaveFun</div>
             </div>
             <div>
                 <div class="search-bar">
@@ -132,7 +208,7 @@
                 </div>
             </div>
         </header>
-        <d class="main">
+        <div class="main">
             <div class="filter-bar">
                 <div class="filter">
                     <div>
@@ -168,18 +244,18 @@
                             <input type="checkbox"><span>Food</span>
                         </div>
                         <div>
-                            <button type="checkbox"><span>Learning</span>
+                            <input type="checkbox"><span>Learning</span>
                         </div>
                         <div>
-                            <i type="checkbox"><span>Outdoors</span>
+                            <input type="checkbox"><span>Outdoors</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <d class="content">
-                <d class="filter-info">
-                    <p>Showing 15 results by</p>
-                    <d class="taglist">
+            <div class="content">
+                <div class="filter-info">
+                    <p class="title">Showing <span class="purple">15</span> results by</p>
+                    <div class="taglist">
                         <span class="tag">
                             Kaohsiung
                             <i class="far fa-times-circle"></i>
@@ -187,14 +263,80 @@
                         <span class="tag">
                             Kaohsiung
                             <i class="far fa-times-circle"></i>
-                        </s>
-                    </d>
-                </d>
-                <div class="filter-result"></div>
-            </d>
-        </d>
+                        </span>
+                    </div>
+                </div>
+                <div class="filter-result">
+                    <div class="event">
+                        <img src="./pic1.png" alt="">
+                        <div class="event-content">
+                            <div class="title purple">中都愛河濕地公園</div>
+                            <p class="paragraph">串起高雄城市生態綠廊的中都愛河濕地公園座落於愛河南側的十全與九如路之間，
+                                全長約2.5公里，佔地達七千餘平方公尺。為了打造與市民生活融合的「水岸花香的永續生態城市」，
+                                愛河濕地公園以生態工法構築邊坡，重現早期溼地豐富生態棲息環境。園區設置原木建築為遊客解說中心，
+                                另有木造涼亭、吊橋、潮汐親水平台以及漂流木為設計主軸的燈具座椅等設施，質樸中深具原野氣息，
+                                而仿自然的複層林相植栽也使市區重現豐富林相。悠遊於綠油油曲折玲瓏的河岸可見各種水鳥飛翔駐留、
+                                紅樹林和濕地更使愛河重現盎然生機。由於中都濕地公園打造出兼具自然生態、教育解說及民眾休憩等眾多功能，
+                                又完整呈現愛河沿岸多樣性的風貌，2012年榮獲「全球卓越建設獎」殊榮，也因此有高雄都會桃花源的美稱。</p>
+                            <div class="event-info">
+                                <div class="event-info-row">
+                                    Ethan Foster
+                                    <span class="event-tag">
+                                        Entertainment
+                                    </span>
+                                </div>
+                                <div class="event-info-row">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Kaohsiung City
+                                    <i class="fa fa-calendar-alt"></i>
+                                    2018/5/24 - 2018/5/31
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <img src="./pic2.png" alt="">
+                        <div class="event-content">
+                            <div class="title purple">彪琥台灣鞋故事館觀光工廠</div>
+                            <p class="paragraph">"2009年彪琥臺灣鞋故事館成立，是臺灣唯一通過觀光工廠評鑑之製鞋廠，
+                                也是少數完整開放製鞋過程供參觀的鞋廠，在此可以親眼見證一雙鞋子從無到有、
+                                師傅們堅持手感製鞋的各項過程。彪琥堅持MIT精神，將臺灣曾經興盛一時的製鞋產業用心守護，
+                                積極投入產業轉型提昇技術，保留在地文化，讓遊客了解鞋的歷史演進、製鞋產業的發展史及忠實呈現製鞋全製程。"</p>
+                            <div class="event-info">
+                                <div class="event-info-row">
+                                    Ethan Foster
+                                    <span class="event-tag">
+                                        Entertainment
+                                    </span>
+                                </div>
+                                <div class="event-info-row">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Kaohsiung City
+                                    <i class="fa fa-calendar-alt"></i>
+                                    2018/5/24 - 2018/5/31
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="page-navi">
+                    <ul class="pagination navbar-right" align="right">
+                        <li class="page-item">
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item">
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
 
+                    </ul>
 
+                </nav>
+            </div>
+        </div>
     </body>
-
 </html>
