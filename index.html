@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>F2E Week2 Filter</title>
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <style>
+            .header {
+                background-color: #7828B4;
+                color: #FFFFFF;
+                Height: 92px;
+                Width: 100%;
+                font-size: 36px;
+                font-family: "Optima-ExtraBlack";
+            }
+            
+            .header>div {
+                margin-top: 20px;
+                margin-left: 20px;
+                display: inline-block
+            }
+            
+            .search-bar {
+                border-bottom: 2px solid #FFFFFF;
+                text-decoration: #FFFFFF;
+                width: 388px;
+                font-size: 20px;
+                font-family: "Roboto-Italic";
+                background-color: transparent;
+                display: inline-block;
+                margin-left: 200px;
+            }
+            
+            .search-bar>input {
+                background-color: transparent;
+                border: 0px;
+                overflow: visible;
+                width: 80%;
+                margin-left: 5%
+            }
+            
+            .subtitle {
+                font-size: 20px;
+                font-family: "Roboto Bold";
+                color: #000000;
+            }
+            
+            ul {
+                list-style-type: none;
+            }
+            
+            .filter-bar {
+                width: 300px;
+                padding: 10px;
+                display: block;
+            }
+            
+            .filter {
+                border: 1px solid #cccccc !important;
+                background-color: #ebebeb;
+            }
+            
+            .filter>div {
+                position: relative;
+                margin: 20px auto 20px auto;
+                width: 63%;
+                height: auto;
+            }
+            
+            .btn-circle {
+                border-radius: 50%;
+                
+            }
+
+            .content{
+              width: 70%;
+              display: block;
+            }
+
+            .main{
+                display: flex;
+                width:100%;
+            }
+            
+            .tag{
+                background-color: transparent;
+                border: 1px solid #7828B4;
+                border-radius: 15px;
+                color:#7828B4;
+                height: 35px;     
+                padding: 7px;     
+                display: inline-block; 
+                white-space: nowrap;
+                margin-left: 5px;
+            }
+
+            input+span{
+                margin-left: 5px
+            }
+
+            .tag-close{
+                /* border-radius: 50%; */
+                height: 16px;
+                width: 16px;
+                display: inline-block;
+                margin: auto;
+                font-size: 10px;
+                align-items: center
+            }
+
+            .taglist{
+                display: flex
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header class="header">
+            <div>
+                <div class="logo">HaveFun</div>
+            </div>
+            <div>
+                <div class="search-bar">
+                    <span class="glyphicon glyphicon-search"></span>
+                    <input type="text" placeholder="Explore your own activity"></input>
+                </div>
+            </div>
+        </header>
+        <d class="main">
+            <div class="filter-bar">
+                <div class="filter">
+                    <div>
+                        <p class="subtitle">Location</p>
+                        <select name="" id="">
+                      <option value="taiwan">Taiwan</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="filter">
+                    <div align="left">
+                        <p class="subtitle">Date</p>
+                        <div align="right">
+                            <label for="">from</label>
+                            <input type="date">
+                        </div>
+                        <div align="right">
+                            <label for="">to</label>
+                            <input type="date">
+                        </div>
+                    </div>
+                </div>
+                <div class="filter">
+                    <div>
+                        <p class="subtitle">Category</p>
+                        <div>
+                            <input type="checkbox"><span>All</span>
+                        </div>
+                        <div>
+                            <input type="checkbox"><span>Entertainment</span>
+                        </div>
+                        <div>
+                            <input type="checkbox"><span>Food</span>
+                        </div>
+                        <div>
+                            <button type="checkbox"><span>Learning</span>
+                        </div>
+                        <div>
+                            <i type="checkbox"><span>Outdoors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <d class="content">
+                <d class="filter-info">
+                    <p>Showing 15 results by</p>
+                    <d class="taglist">
+                        <span class="tag">
+                            Kaohsiung
+                            <i class="far fa-times-circle"></i>
+                        </span>
+                        <span class="tag">
+                            Kaohsiung
+                            <i class="far fa-times-circle"></i>
+                        </s>
+                    </d>
+                </d>
+                <div class="filter-result"></div>
+            </d>
+        </d>
+
+
+    </body>
+
+</html>
