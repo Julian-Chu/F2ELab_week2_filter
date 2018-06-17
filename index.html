@@ -17,6 +17,8 @@
                 Width: 100%;
                 font-size: 36px;
                 font-family: "Optima-ExtraBlack";
+                display: flex;
+                flex-direction: row;
             }
             
             .header>div {
@@ -56,9 +58,11 @@
             
             .filter-bar {
                 width: 300px;
+                min-width: 300px;
                 padding: 10px;
                 display: block;
             }
+
             
             .filter {
                 border: 0.5px solid #cccccc !important;
@@ -80,11 +84,14 @@
             .content {
                 width: 70%;
                 display: block;
+                min-width: 500px;
             }
             
             .main {
                 display: flex;
                 width: 100%;
+                flex-direction: row;
+                flex-wrap: wrap;
             }
             
             body {
@@ -192,6 +199,30 @@
             .paragraph {
                 font-family: "Roboto Bold 16px";
                 font-size: 16px;
+            }
+
+            @media screen and (max-width: 800px){
+                .header{
+                    flex-direction: column;
+                    margin-bottom: 60px;
+                }
+
+                .search-bar{
+                    color:#7828B4;
+                    border-color: #7828B4;
+                }
+                .filter-bar{
+                    width: 100%;
+                    min-width: 0;
+                    padding: 0 5% 0 5%;
+                }
+
+                .content{
+                    width: 100%;
+                    min-width: 0;
+                    padding: 0 5% 0 5%;
+                }
+
             }
         </style>
     </head>
