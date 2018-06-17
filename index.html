@@ -177,6 +177,7 @@
                 width: 100%;
                 box-shadow: 2px 2px 3px #000000;
                 margin-bottom: 10px;
+                flex-direction: row;
             }
             
             .event:hover {
@@ -230,6 +231,19 @@
                     display: inline-block;
                     white-space: nowrap;
                     overflow: hidden;
+                }
+
+                .event{
+                    flex-direction: column;
+                    height: auto;
+                }
+
+                .event img{
+                    width: 100%;
+                }
+
+                .event-content{
+                    width: 100%;
                 }
 
             }
@@ -338,7 +352,7 @@
                         <img src="./pic2.png" alt="">
                         <div class="event-content">
                             <div class="title purple">彪琥台灣鞋故事館觀光工廠</div>
-                            <p class="paragraph">"2009年彪琥臺灣鞋故事館成立，是臺灣唯一通過觀光工廠評鑑之製鞋廠， 也是少數完整開放製鞋過程供參觀的鞋廠，在此可以親眼見證一雙鞋子從無到有、 師傅們堅持手感製鞋的各項過程。彪琥堅持MIT精神，將臺灣曾經興盛一時的製鞋產業用心守護， 積極投入產業轉型提昇技術，保留在地文化，讓遊客了解鞋的歷史演進、製鞋產業的發展史及忠實呈現製鞋全製程。"
+                            <p class="paragraph">2009年彪琥臺灣鞋故事館成立，是臺灣唯一通過觀光工廠評鑑之製鞋廠， 也是少數完整開放製鞋過程供參觀的鞋廠，在此可以親眼見證一雙鞋子從無到有、 師傅們堅持手感製鞋的各項過程。彪琥堅持MIT精神，將臺灣曾經興盛一時的製鞋產業用心守護， 積極投入產業轉型提昇技術，保留在地文化，讓遊客了解鞋的歷史演進、製鞋產業的發展史及忠實呈現製鞋全製程。"
                             </p>
                             <div class="event-info">
                                 <div class="event-info-row">
