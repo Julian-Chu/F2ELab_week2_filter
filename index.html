@@ -62,7 +62,6 @@
                 padding: 10px;
                 display: block;
             }
-
             
             .filter {
                 border: 0.5px solid #cccccc !important;
@@ -70,7 +69,7 @@
                 width: 100%;
             }
             
-            .filter>div {
+            .filter-content {
                 position: relative;
                 margin: 20px auto 20px auto;
                 width: 75%;
@@ -135,7 +134,7 @@
                 width: 100%;
             }
             
-            .event>img {
+            .event img {
                 height: 200px;
                 width: 200px;
                 min-width: 200px;
@@ -200,27 +199,37 @@
                 font-family: "Roboto Bold 16px";
                 font-size: 16px;
             }
-
-            @media screen and (max-width: 800px){
-                .header{
+            
+            @media screen and (max-width: 800px) {
+                .header {
                     flex-direction: column;
                     margin-bottom: 60px;
                 }
-
-                .search-bar{
-                    color:#7828B4;
+                .search-bar {
+                    color: #7828B4;
                     border-color: #7828B4;
                 }
-                .filter-bar{
+                .filter-bar {
+                    width: 100%;
+                    min-width: 0;
+                    padding: 0 5% 0 5%;
+                }
+                .content {
                     width: 100%;
                     min-width: 0;
                     padding: 0 5% 0 5%;
                 }
 
-                .content{
-                    width: 100%;
-                    min-width: 0;
-                    padding: 0 5% 0 5%;
+                .filter-options{
+                    display: flex;
+                    flex-direction: row;
+                }
+
+                .filter-options>div{
+                    margin-right: 10px;
+                    display: inline-block;
+                    white-space: nowrap;
+                    overflow: hidden;
                 }
 
             }
@@ -242,7 +251,7 @@
         <div class="main">
             <div class="filter-bar">
                 <div class="filter">
-                    <div>
+                    <div class="filter-content">
                         <p class="subtitle">Location</p>
                         <select name="" id="">
                       <option value="taiwan">Taiwan</option>
@@ -250,35 +259,39 @@
                     </div>
                 </div>
                 <div class="filter">
-                    <div>
+                    <div class="filter-content">
                         <p class="subtitle">Date</p>
-                        <div>
-                            <label for="">from</label>
-                            <input type="date">
-                        </div>
-                        <div>
-                            <label for="">to &emsp; </label>
-                            <input type="date">
+                        <div class="filter-options">
+                            <div>
+                                <label for="">from</label>
+                                <input type="date">
+                            </div>
+                            <div>
+                                <label for="">to &emsp; </label>
+                                <input type="date">
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="filter">
-                    <div>
+                    <div class="filter-content">
                         <p class="subtitle">Category</p>
-                        <div>
-                            <input type="checkbox"><span>All</span>
-                        </div>
-                        <div>
-                            <input type="checkbox"><span>Entertainment</span>
-                        </div>
-                        <div>
-                            <input type="checkbox"><span>Food</span>
-                        </div>
-                        <div>
-                            <input type="checkbox"><span>Learning</span>
-                        </div>
-                        <div>
-                            <input type="checkbox"><span>Outdoors</span>
+                        <div class="filter-options">
+                            <div>
+                                <input type="checkbox"><span>All</span>
+                            </div>
+                            <div>
+                                <input type="checkbox"><span>Entertainment</span>
+                            </div>
+                            <div>
+                                <input type="checkbox"><span>Food</span>
+                            </div>
+                            <div>
+                                <input type="checkbox"><span>Learning</span>
+                            </div>
+                            <div>
+                                <input type="checkbox"><span>Outdoors</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -299,7 +312,9 @@
                 </div>
                 <div class="filter-result">
                     <div class="event">
-                        <img src="./pic1.png" alt="">
+                        <div>
+                            <img src="./pic1.png" alt="">
+                        </div>
                         <div class="event-content">
                             <div class="title purple">中都愛河濕地公園</div>
                             <p class="paragraph">串起高雄城市生態綠廊的中都愛河濕地公園座落於愛河南側的十全與九如路之間， 全長約2.5公里，佔地達七千餘平方公尺。為了打造與市民生活融合的「水岸花香的永續生態城市」， 愛河濕地公園以生態工法構築邊坡，重現早期溼地豐富生態棲息環境。園區設置原木建築為遊客解說中心， 另有木造涼亭、吊橋、潮汐親水平台以及漂流木為設計主軸的燈具座椅等設施，質樸中深具原野氣息， 而仿自然的複層林相植栽也使市區重現豐富林相。悠遊於綠油油曲折玲瓏的河岸可見各種水鳥飛翔駐留、
