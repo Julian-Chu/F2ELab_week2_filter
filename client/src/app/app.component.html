@@ -1,125 +1,125 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div>
-    <div class="header">
-        <div>
-            <div class="logo" href="#">HaveFun</div>
-        </div>
-        <div>
-            <div class="search-bar">
-                <span class="glyphicon glyphicon-search"></span>
-                <input name="keyword" [(ngModel)]="keyword" #tKeyword="ngModel" type="text" placeholder="Explore your own activity">
-            </div>
-        </div>
+  <div class="header">
+    <div>
+      <div class="logo" href="#">HaveFun</div>
     </div>
-    <div class="main">
-        <div class="filter-bar">
-            <div class="filter">
-                <div class="filter-content">
-                    <p class="subtitle">Location</p>
-                    <select name="" id="">
+    <div>
+      <div class="search-bar">
+        <span class="glyphicon glyphicon-search"></span>
+        <input name="keyword" [(ngModel)]="keyword" #tKeyword="ngModel" type="text" placeholder="Explore your own activity">
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="filter-bar">
+      <div class="filter">
+        <div class="filter-content">
+          <p class="subtitle">Location</p>
+          <select name="" id="">
             <option value="taiwan">Taiwan</option>
           </select>
-                </div>
-            </div>
-            <div class="filter">
-                <div class="filter-content">
-                    <p class="subtitle">Date</p>
-                    <div class="filter-options">
-                        <div>
-                            <label for="">from</label>
-                            <input type="date">
-                        </div>
-                        <div>
-                            <label for="">to &emsp; </label>
-                            <input type="date">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="filter">
-                <div class="filter-content">
-                    <p class="subtitle">Category</p>
-                    <div class="filter-options">
-                        <div>
-                            <input type="checkbox">
-                            <span>All</span>
-                        </div>
-                        <div>
-                            <input type="checkbox">
-                            <span>Entertainment</span>
-                        </div>
-                        <div>
-                            <input type="checkbox">
-                            <span>Food</span>
-                        </div>
-                        <div>
-                            <input type="checkbox">
-                            <span>Learning</span>
-                        </div>
-                        <div>
-                            <input type="checkbox">
-                            <span>Outdoors</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class="content">
-            <div class="filter-info">
-                <p class="title">Showing
-                    <span class="purple">15</span> results by</p>
-                <div class="taglist">
-                    <span class="tag">
-            Kaohsiung
-            <i class="far fa-times-circle"></i>
-          </span>
-                    <span class="tag">
-            Kaohsiung
-            <i class="far fa-times-circle"></i>
-          </span>
-                </div>
+      </div>
+      <div class="filter">
+        <div class="filter-content">
+          <p class="subtitle">Date</p>
+          <div class="filter-options">
+            <div>
+              <label for="">from</label>
+              <input type="date">
             </div>
-            <div class="filter-result">
-                <div *ngFor="let item of data" class="event">
-                    <div>
-                        <img src={{item.Picture1}} alt="">
-                    </div>
-                    <div class="event-content">
-                        <div class="title purple">{{item.Name}}</div>
-                        <p class="paragraph">{{item.Description}}</p>
-                        <div class="event-info">
-                            <div class="event-info-row">
-                                {{item.Ticketinfo}}
-                                <span class="event-tag">
-                               Entertainment
-                           </span>
-                            </div>
-                            <div class="event-info-row">
-                                <i class="fas fa-map-marker-alt"></i>{{item.Zone}}
-                                <i class="fa fa-calendar-alt"></i> {{item.Opentime}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div>
+              <label for="">to &emsp; </label>
+              <input type="date">
             </div>
-            <nav class="page-navi">
-                <ul class="pagination navbar-right" align="right">
-                    <li class="page-item">
-                        <a href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                        <a href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+          </div>
         </div>
+      </div>
+      <div class="filter">
+        <div class="filter-content">
+          <p class="subtitle">Category</p>
+          <div class="filter-options">
+            <div>
+              <input type="checkbox">
+              <span>All</span>
+            </div>
+            <div>
+              <input type="checkbox">
+              <span>Entertainment</span>
+            </div>
+            <div>
+              <input type="checkbox">
+              <span>Food</span>
+            </div>
+            <div>
+              <input type="checkbox">
+              <span>Learning</span>
+            </div>
+            <div>
+              <input type="checkbox">
+              <span>Outdoors</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="content">
+      <div class="filter-info">
+        <p class="title">Showing
+          <span class="purple">{{this.data.length}}</span> results by</p>
+        <div class="taglist">
+          <span class="tag">
+            Kaohsiung
+            <i class="far fa-times-circle"></i>
+          </span>
+          <span class="tag">
+            Kaohsiung
+            <i class="far fa-times-circle"></i>
+          </span>
+        </div>
+      </div>
+      <div class="filter-result">
+        <div *ngFor="let item of data" class="event">
+          <div>
+            <img src={{item.Picture1}} alt="">
+          </div>
+          <div class="event-content">
+            <div class="title purple">{{item.Name}}</div>
+            <p class="paragraph">{{item.Description}}</p>
+            <div class="event-info">
+              <div class="event-info-row">
+                {{item.Ticketinfo}}
+                <span class="event-tag">
+                  Entertainment
+                </span>
+              </div>
+              <div class="event-info-row">
+                <i class="fas fa-map-marker-alt"></i>{{item.Zone}}
+                <i class="fa fa-calendar-alt"></i> {{item.Opentime}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="page-navi">
+        <ul class="pagination navbar-right" align="right">
+          <li class="page-item">
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </div>
 <router-outlet></router-outlet>
