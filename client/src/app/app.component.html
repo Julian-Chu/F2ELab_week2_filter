@@ -1,6 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div>
-
     <div class="header">
         <div>
             <div class="logo" href="#">HaveFun</div>
@@ -8,7 +7,7 @@
         <div>
             <div class="search-bar">
                 <span class="glyphicon glyphicon-search"></span>
-                <input type="text" placeholder="Explore your own activity">
+                <input name="keyword" [(ngModel)]="keyword" #tKeyword="ngModel" type="text" placeholder="Explore your own activity">
             </div>
         </div>
     </div>
@@ -118,9 +117,7 @@
                             <span aria-hidden="true">&raquo;</span>
                         </a>
                     </li>
-
                 </ul>
-
             </nav>
         </div>
     </div>
