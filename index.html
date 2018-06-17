@@ -1,155 +1,24 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>F2E Week2 Filter</title>
-        <script src="https://code.jquery.com/jquery.min.js"></script>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        <link rel="stylesheet" href="./style.css">
-    </head>
+<head>
+  <base href="/" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>F2E Week2 Filter</title>
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./styles.34c57ab7888ec1573f9c.css">
+</head>
 
-    <body>
-        <header class="header">
-            <div>
-                <div class="logo" href="#">HaveFun</div>
-            </div>
-            <div>
-                <div class="search-bar">
-                    <span class="glyphicon glyphicon-search"></span>
-                    <input type="text" placeholder="Explore your own activity"></input>
-                </div>
-            </div>
-        </header>
-        <div class="main">
-            <div class="filter-bar">
-                <div class="filter">
-                    <div class="filter-content">
-                        <p class="subtitle">Location</p>
-                        <select name="" id="">
-                      <option value="taiwan">Taiwan</option>
-                    </select>
-                    </div>
-                </div>
-                <div class="filter">
-                    <div class="filter-content">
-                        <p class="subtitle">Date</p>
-                        <div class="filter-options">
-                            <div>
-                                <label for="">from</label>
-                                <input type="date">
-                            </div>
-                            <div>
-                                <label for="">to &emsp; </label>
-                                <input type="date">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="filter">
-                    <div class="filter-content">
-                        <p class="subtitle">Category</p>
-                        <div class="filter-options">
-                            <div>
-                                <input type="checkbox"><span>All</span>
-                            </div>
-                            <div>
-                                <input type="checkbox"><span>Entertainment</span>
-                            </div>
-                            <div>
-                                <input type="checkbox"><span>Food</span>
-                            </div>
-                            <div>
-                                <input type="checkbox"><span>Learning</span>
-                            </div>
-                            <div>
-                                <input type="checkbox"><span>Outdoors</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content">
-                <div class="filter-info">
-                    <p class="title">Showing <span class="purple">15</span> results by</p>
-                    <div class="taglist">
-                        <span class="tag">
-                            Kaohsiung
-                            <i class="far fa-times-circle"></i>
-                        </span>
-                        <span class="tag">
-                            Kaohsiung
-                            <i class="far fa-times-circle"></i>
-                        </span>
-                    </div>
-                </div>
-                <div class="filter-result">
-                    <div class="event">
-                        <div>
-                            <img src="./pic1.png" alt="">
-                        </div>
-                        <div class="event-content">
-                            <div class="title purple">中都愛河濕地公園</div>
-                            <p class="paragraph">串起高雄城市生態綠廊的中都愛河濕地公園座落於愛河南側的十全與九如路之間， 全長約2.5公里，佔地達七千餘平方公尺。為了打造與市民生活融合的「水岸花香的永續生態城市」， 愛河濕地公園以生態工法構築邊坡，重現早期溼地豐富生態棲息環境。園區設置原木建築為遊客解說中心， 另有木造涼亭、吊橋、潮汐親水平台以及漂流木為設計主軸的燈具座椅等設施，質樸中深具原野氣息， 而仿自然的複層林相植栽也使市區重現豐富林相。悠遊於綠油油曲折玲瓏的河岸可見各種水鳥飛翔駐留、
-                                紅樹林和濕地更使愛河重現盎然生機。由於中都濕地公園打造出兼具自然生態、教育解說及民眾休憩等眾多功能， 又完整呈現愛河沿岸多樣性的風貌，2012年榮獲「全球卓越建設獎」殊榮，也因此有高雄都會桃花源的美稱。
-                            </p>
-                            <div class="event-info">
-                                <div class="event-info-row">
-                                    Ethan Foster
-                                    <span class="event-tag">
-                                        Entertainment
-                                    </span>
-                                </div>
-                                <div class="event-info-row">
-                                    <i class="fas fa-map-marker-alt"></i> Kaohsiung City
-                                    <i class="fa fa-calendar-alt"></i> 2018/5/24 - 2018/5/31
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="event">
-                        <img src="./pic2.png" alt="">
-                        <div class="event-content">
-                            <div class="title purple">彪琥台灣鞋故事館觀光工廠</div>
-                            <p class="paragraph">2009年彪琥臺灣鞋故事館成立，是臺灣唯一通過觀光工廠評鑑之製鞋廠， 也是少數完整開放製鞋過程供參觀的鞋廠，在此可以親眼見證一雙鞋子從無到有、 師傅們堅持手感製鞋的各項過程。彪琥堅持MIT精神，將臺灣曾經興盛一時的製鞋產業用心守護， 積極投入產業轉型提昇技術，保留在地文化，讓遊客了解鞋的歷史演進、製鞋產業的發展史及忠實呈現製鞋全製程。"
-                            </p>
-                            <div class="event-info">
-                                <div class="event-info-row">
-                                    Ethan Foster
-                                    <span class="event-tag">
-                                        Entertainment
-                                    </span>
-                                </div>
-                                <div class="event-info-row">
-                                    <i class="fas fa-map-marker-alt"></i> Kaohsiung City
-                                    <i class="fa fa-calendar-alt"></i> 2018/5/24 - 2018/5/31
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <nav class="page-navi">
-                    <ul class="pagination navbar-right" align="right">
-                        <li class="page-item">
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item">
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </nav>
-            </div>
-        </div>
-    </body>
+<body>
+  <app-root></app-root>
+  <script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script>
+  <script type="text/javascript" src="polyfills.2f4a59095805af02bd79.js"></script>
+  <script type="text/javascript" src="main.34442129f1a88a3e73b8.js"></script>
+</body>
 
 </html>
